@@ -1,0 +1,9 @@
+Every mod. in nodejs gets wrapped in an iife before being loaded
+IIFE helps keep top-level vars soped to the mod rather thanthe global obj.
+The IIFE that wraps Every mod contains 5 parameters which are pretty important for the functioning of a mod
+
+we have 5 wrappers in total they are export, require,module, __filename, __dirname
+(function(export, require, module, __filename, __dirname){
+  const superHero = "batman"
+  console.log(superHero)
+})
